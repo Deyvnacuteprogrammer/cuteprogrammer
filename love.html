@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="love.css">
+    <title>Aceita namorar comigo?</title>
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Feliz Dia dos Namorados!</h1>
+        <img src="./urso.gif">
+
+        <h2>Aceita namorar comigo?</h2>
+
+        <a href="https://youtu.be/lYxSOPLNeDE"><button id="sim">Sim!</button></a>
+        <button onmouseover="fuja()" id="nao">Não!</button>
+
+        <script>
+           function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var largurajanela = window.innerWidth;
+            var alturajanela = window.innerHeight;
+
+            var maxX = largurajanela - botaoNao.offsetWidth;
+            var maxY = alturajanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX );
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top =aleatorioY + "px";
+
+           }
+        </script>
+
+
+
+    </div>
+</body>
+</html>
